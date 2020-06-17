@@ -56,11 +56,15 @@ HumanReplyKey.create(key: key2, human_reply_id: humanReply4.id)
 
 # LGBT in tech start
 
-key3 = Key.create(key_phrase: "lgbt")
+alan_key = Key.create(key_phrase: "lgbt")
 
-botReply6 = BotReply.create(bot_response: "LGBT", image: false)
+botReply6 = BotReply.create(bot_response: "Where should we start?", image: false)
 
-BotReplyKey.create(key: key3, bot_reply_id: botReply6.id)
+BotReplyKey.create(key: alan_key, bot_reply_id: botReply6.id)
+
+lgbt_human_reply1 = HumanReply.create(human_response: "Alan Turing", value: "alan")
+
+HumanReplyKey.create(key: alan_key, human_reply_id: lgbt_human_reply1.id)
 
 
 
@@ -81,6 +85,46 @@ HumanReplyKey.create(key: ada_key, human_reply_id: ada_human_reply1.id)
 
 # Ada LoveLace starts
 
+
+
+
+
+
+# Alan Turning starts
+
+alan_key = Key.create(key_phrase: "alan")
+
+alan_reply1 = BotReply.create(bot_response: "Alan Turing is generally considered the father of modern computer science.", image: false)
+alan_reply2 = BotReply.create(bot_response: "Being the first person to write code that would be recognised as a programming language today.", image: false)
+
+BotReplyKey.create(key: alan_key, bot_reply_id: alan_reply1.id)
+BotReplyKey.create(key: alan_key, bot_reply_id: alan_reply2.id)
+
+
+alan_human_reply1 = HumanReply.create(human_response: "The turing machine", value: "alan2")
+
+HumanReplyKey.create(key: alan_key, human_reply_id: alan_human_reply1.id)
+
+alan_key2 = Key.create(key_phrase: "alan2")
+
+alan_reply3 = BotReply.create(bot_response: "In an attempt to work out what is computable he concieved a theoretical machine called the a-machine. ", image: false)
+alan_reply4 = BotReply.create(bot_response: "He published a paper in 1936 about his theoretical machine at the same time Alonzo Church (who was Alan Turings Professor) published his paper on Lambda calculus.", image: false)
+alan_reply5 = BotReply.create(bot_response: "While both had been working independently both their papers were aimed at solving the same problem however in very different ways.", image: false)
+alan_reply6 = BotReply.create(bot_response: "Yet they both realised that anything that could be calculated with Lambda calculus you could do with an a-machine and vis versa, Alonzo Church named the a-machine a Turing Machine and the name stuck.", image: false)
+
+BotReplyKey.create(key: alan_key2, bot_reply_id: alan_reply3.id)
+BotReplyKey.create(key: alan_key2, bot_reply_id: alan_reply4.id)
+BotReplyKey.create(key: alan_key2, bot_reply_id: alan_reply5.id)
+BotReplyKey.create(key: alan_key2, bot_reply_id: alan_reply6.id)
+
+
+alan_human_reply2 = HumanReply.create(human_response: "interesting ...", value: "alan2")
+
+HumanReplyKey.create(key: alan_key, human_reply_id: alan_human_reply1.id)
+
+
+# Alan Turning Ends
+
 # menu start
 
 key4 = Key.create(key_phrase: "menu")
@@ -88,7 +132,7 @@ key4 = Key.create(key_phrase: "menu")
 menu_human_reply1 = HumanReply.create(human_response: "Menu", value:"menu")
 
 HumanReplyKey.create(key: key2, human_reply_id: menu_human_reply1.id)
-HumanReplyKey.create(key: key3, human_reply_id: menu_human_reply1.id)
+HumanReplyKey.create(key: alan_key, human_reply_id: menu_human_reply1.id)
 HumanReplyKey.create(key: ada_key, human_reply_id: menu_human_reply1.id)
 
 HumanReplyKey.create(key: key4, human_reply_id: humanReply1.id)
