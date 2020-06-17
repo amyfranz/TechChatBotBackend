@@ -1,11 +1,11 @@
+BotReplyKey.all.destroy_all
+HumanReplyKey.all.destroy_all
 Key.all.destroy_all
 BotReply.all.destroy_all
 HumanReply.all.destroy_all
-BotReplyKey.all.destroy_all
-HumanReplyKey.all.destroy_all
 
 # menu reply needed for multiple things
-humanReply3 = HumanReply.create(human_response: "Menu", value:"menu")
+
 
 # intro start
 
@@ -35,11 +35,21 @@ HumanReplyKey.create(key: key1, human_reply_id: humanReply2.id)
 
 key2 = Key.create(key_phrase: "woman")
 
-botReply7 = BotReply.create(bot_response: "Woman", image: false)
+botReply7 = BotReply.create(bot_response: "Where should we start?", image: false)
 
 BotReplyKey.create(key: key2, bot_reply_id: botReply7.id)
 
-HumanReplyKey.create(key: key2, human_reply_id: humanReply3.id)
+humanReply4 = HumanReply.create(human_response: "Ada Lovelace", value: "Ada")
+humanReply5 = HumanReply.create(human_response: "Annie Easley", value: "Annie")
+humanReply6 = HumanReply.create(human_response: "Hedy Lamarr", value: "Hedy")
+humanReply7 = HumanReply.create(human_response: "The Women of ENIAC", value: "ENIAC")
+humanReply8 = HumanReply.create(human_response: "Carol Shaw", value: "Carol")
+
+HumanReplyKey.create(key: key2, human_reply_id: humanReply8.id)
+HumanReplyKey.create(key: key2, human_reply_id: humanReply5.id)
+HumanReplyKey.create(key: key2, human_reply_id: humanReply6.id)
+HumanReplyKey.create(key: key2, human_reply_id: humanReply7.id)
+HumanReplyKey.create(key: key2, human_reply_id: humanReply4.id)
 
 # women in tech end
 
@@ -52,13 +62,34 @@ botReply6 = BotReply.create(bot_response: "LGBT", image: false)
 
 BotReplyKey.create(key: key3, bot_reply_id: botReply6.id)
 
-HumanReplyKey.create(key: key3, human_reply_id: humanReply3.id)
+
 
 # LGBT in tech end
+
+# Ada LoveLace starts
+
+ada_key = Key.create(key_phrase: "Ada")
+
+ada_reply1 = BotReply.create(bot_response: "Ada Lovelace was the WORLDS!!!! first Programmer", image: false)
+
+BotReplyKey.create(key: ada_key, bot_reply_id: ada_reply1.id)
+
+
+ada_human_reply1 = HumanReply.create(human_response: "interesting ...", value: "Ada")
+
+HumanReplyKey.create(key: ada_key, human_reply_id: ada_human_reply1.id)
+
+# Ada LoveLace starts
 
 # menu start
 
 key4 = Key.create(key_phrase: "menu")
+
+menu_human_reply1 = HumanReply.create(human_response: "Menu", value:"menu")
+
+HumanReplyKey.create(key: key2, human_reply_id: menu_human_reply1.id)
+HumanReplyKey.create(key: key3, human_reply_id: menu_human_reply1.id)
+HumanReplyKey.create(key: ada_key, human_reply_id: menu_human_reply1.id)
 
 HumanReplyKey.create(key: key4, human_reply_id: humanReply1.id)
 HumanReplyKey.create(key: key4, human_reply_id: humanReply2.id)
