@@ -11,43 +11,47 @@ HumanReply.all.destroy_all
 
 intro_key = Key.create(key_phrase: "intro")
 
-intro_botReply1 = BotReply.create(bot_response: "Hey there!", image: false)
-intro_botReply2 = BotReply.create(bot_response: "https://media.giphy.com/media/X8ynfaP1ZwTvTbxH1b/giphy.gif", image: true)
-intro_botReply3 = BotReply.create(bot_response: "I'm Lucy and I will be educating you about the amazing woman and LQBT community in tech.", image: false)
-intro_botReply4 = BotReply.create(bot_response: "Let's begin!", image: false)
-intro_botReply5 = BotReply.create(bot_response: "What would you like to look at?", image: false)
+intro_bot_reply1 = BotReply.create(bot_response: "Hey there!", image: false)
+intro_bot_reply2 = BotReply.create(bot_response: "https://media.giphy.com/media/X8ynfaP1ZwTvTbxH1b/giphy.gif", image: true)
+intro_bot_reply3 = BotReply.create(bot_response: "I'm Lucy and I will be educating you about the amazing woman and LQBT community in tech.", image: false)
+intro_bot_reply4 = BotReply.create(bot_response: "Let's begin!", image: false)
+intro_bot_reply5 = BotReply.create(bot_response: "What would you like to look at?", image: false)
+intro_bot_reply6 = BotReply.create(bot_response: "https://media.giphy.com/media/hXCJfewTSyqTXz2trM/giphy.gif", image: true)
 
-BotReplyKey.create(key: intro_key, bot_reply_id: intro_botReply1.id)
-BotReplyKey.create(key: intro_key, bot_reply_id: intro_botReply2.id)
-BotReplyKey.create(key: intro_key, bot_reply_id: intro_botReply3.id)
-BotReplyKey.create(key: intro_key, bot_reply_id: intro_botReply4.id)
-BotReplyKey.create(key: intro_key, bot_reply_id: intro_botReply5.id)
+BotReplyKey.create(key: intro_key, bot_reply_id: intro_bot_reply1.id)
+BotReplyKey.create(key: intro_key, bot_reply_id: intro_bot_reply2.id)
+BotReplyKey.create(key: intro_key, bot_reply_id: intro_bot_reply3.id)
+BotReplyKey.create(key: intro_key, bot_reply_id: intro_bot_reply4.id)
+BotReplyKey.create(key: intro_key, bot_reply_id: intro_bot_reply5.id)
+BotReplyKey.create(key: intro_key, bot_reply_id: intro_bot_reply6.id)
 
-intro_humanReply1 = HumanReply.create(human_response: "Woman in tech", value:"woman")
-intro_humanReply2 = HumanReply.create(human_response: "LGBT in tech", value:"lgbt")
+intro_human_reply1 = HumanReply.create(human_response: "Ada Lovelace", value: "ada")
+intro_human_reply2 = HumanReply.create(human_response: "Annie Easley", value: "annie")
+intro_human_reply3 = HumanReply.create(human_response: "The Women of ENIAC", value: "eniac")
 
-HumanReplyKey.create(key: intro_key, human_reply_id: intro_humanReply1.id)
-HumanReplyKey.create(key: intro_key, human_reply_id: intro_humanReply2.id)
+HumanReplyKey.create(key: intro_key, human_reply_id: intro_human_reply1.id)
+HumanReplyKey.create(key: intro_key, human_reply_id: intro_human_reply2.id)
+HumanReplyKey.create(key: intro_key, human_reply_id: intro_human_reply3.id)
 
 # intro end
 
 # women in tech start
 
-women_key = Key.create(key_phrase: "woman")
+# show_menu_key = Key.create(key_phrase: "showMenu")
 
-womaen_bot_reply1 = BotReply.create(bot_response: "Who should we start with?", image: false)
-womaen_bot_reply2 = BotReply.create(bot_response: "https://media.giphy.com/media/hXCJfewTSyqTXz2trM/giphy.gif", image: true)
+# menu_bot_reply1 = BotReply.create(bot_response: "Who should we start with?", image: false)
+# menu_bot_reply2 = BotReply.create(bot_response: "https://media.giphy.com/media/hXCJfewTSyqTXz2trM/giphy.gif", image: true)
 
-BotReplyKey.create(key: women_key, bot_reply_id: womaen_bot_reply1.id)
-BotReplyKey.create(key: women_key, bot_reply_id: womaen_bot_reply2.id)
+# BotReplyKey.create(key: menu_key, bot_reply_id: menu_bot_reply1.id)
+# BotReplyKey.create(key: menu_key, bot_reply_id: menu_bot_reply2.id)
 
-women_human_reply1 = HumanReply.create(human_response: "Ada Lovelace", value: "ada")
-women_human_reply2 = HumanReply.create(human_response: "Annie Easley", value: "annie")
-women_human_reply3 = HumanReply.create(human_response: "The Women of ENIAC", value: "eniac")
+# menu_human_reply1 = HumanReply.create(human_response: "Ada Lovelace", value: "ada")
+# menu_human_reply2 = HumanReply.create(human_response: "Annie Easley", value: "annie")
+# menu_human_reply3 = HumanReply.create(human_response: "The Women of ENIAC", value: "eniac")
 
-HumanReplyKey.create(key: women_key, human_reply_id: women_human_reply1.id)
-HumanReplyKey.create(key: women_key, human_reply_id: women_human_reply2.id)
-HumanReplyKey.create(key: women_key, human_reply_id: women_human_reply3.id)
+# HumanReplyKey.create(key: menu_key, human_reply_id: menu_human_reply1.id)
+# HumanReplyKey.create(key: menu_key, human_reply_id: menu_human_reply2.id)
+# HumanReplyKey.create(key: menu_key, human_reply_id: menu_human_reply3.id)
 
 # women in tech end
 
@@ -257,13 +261,14 @@ menu_key = Key.create(key_phrase: "menu")
 
 menu_human_reply1 = HumanReply.create(human_response: "Menu", value:"menu")
 
-HumanReplyKey.create(key: women_key, human_reply_id: menu_human_reply1.id)
+HumanReplyKey.create(key: menu_key, human_reply_id: menu_human_reply1.id)
 HumanReplyKey.create(key: lgbt_key, human_reply_id: menu_human_reply1.id)
 HumanReplyKey.create(key: ada_key, human_reply_id: menu_human_reply1.id)
 
-HumanReplyKey.create(key: menu_key, human_reply_id: intro_humanReply1.id)
-HumanReplyKey.create(key: menu_key, human_reply_id: intro_humanReply2.id)
+HumanReplyKey.create(key: menu_key, human_reply_id: intro_human_reply1.id)
+HumanReplyKey.create(key: menu_key, human_reply_id: intro_human_reply2.id)
+HumanReplyKey.create(key: menu_key, human_reply_id: intro_human_reply3.id)
 
-BotReplyKey.create(key: menu_key, bot_reply_id: intro_botReply5.id)
+BotReplyKey.create(key: menu_key, bot_reply_id: intro_bot_reply5.id)
 
 # menu end
