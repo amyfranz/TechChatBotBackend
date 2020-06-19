@@ -229,6 +229,12 @@ alan_human_reply1 = HumanReply.create(human_response: "The turing machine", valu
 
 HumanReplyKey.create(key: alan_key, human_reply_id: alan_human_reply1.id)
 
+alan_key4 = Key.create(key_phrase: "more")
+
+alan_reply10 = BotReply.create(bot_response: "Anything else?", image: false)
+
+BotReplyKey.create(key: alan_key4, bot_reply_id: alan_reply10.id)
+
 alan_key2 = Key.create(key_phrase: "alan2")
 
 alan_reply3 = BotReply.create(bot_response: "In an attempt to work out what is computable he concieved a theoretical machine called the a-machine. ", image: false)
@@ -242,9 +248,27 @@ BotReplyKey.create(key: alan_key2, bot_reply_id: alan_reply5.id)
 BotReplyKey.create(key: alan_key2, bot_reply_id: alan_reply6.id)
 
 
-alan_human_reply2 = HumanReply.create(human_response: "interesting ...", value: "alan2")
+alan_human_reply2 = HumanReply.create(human_response: "interesting...", value: "more")
 
-HumanReplyKey.create(key: alan_key, human_reply_id: alan_human_reply1.id)
+HumanReplyKey.create(key: alan_key2, human_reply_id: alan_human_reply2.id)
+HumanReplyKey.create(key: alan_key4, human_reply_id: alan_human_reply1.id)
+
+alan_human_reply3 = HumanReply.create(human_response: "Suicide", value: "alan3")
+
+alan_key3 = Key.create(key_phrase: "alan3")
+
+HumanReplyKey.create(key: alan_key, human_reply_id: alan_human_reply3.id)
+HumanReplyKey.create(key: alan_key4, human_reply_id: alan_human_reply3.id)
+
+alan_reply7 = BotReply.create(bot_response: "In 1952, Alan Turing was charged with being a homosexual and given the choice of chemical castration or imprisonment.", image: false)
+alan_reply8 = BotReply.create(bot_response: "Turing Chose chemical castration however 2 years later on 8 June 1954 he was found dead believed to be a cyanide overdose.", image: false)
+alan_reply9 = BotReply.create(bot_response: "Although conspiricy theorists believe there was a darker motive at play.", image: false)
+
+BotReplyKey.create(key: alan_key3, bot_reply_id: alan_reply7.id)
+BotReplyKey.create(key: alan_key3, bot_reply_id: alan_reply8.id)
+BotReplyKey.create(key: alan_key3, bot_reply_id: alan_reply9.id)
+
+HumanReplyKey.create(key: alan_key3, human_reply_id: alan_human_reply2.id)
 
 
 # Alan Turning Ends
@@ -258,9 +282,11 @@ menu_human_reply1 = HumanReply.create(human_response: "Menu", value:"menu")
 HumanReplyKey.create(key: women_key, human_reply_id: menu_human_reply1.id)
 HumanReplyKey.create(key: lgbt_key, human_reply_id: menu_human_reply1.id)
 HumanReplyKey.create(key: ada_key, human_reply_id: menu_human_reply1.id)
+HumanReplyKey.create(key: alan_key4, human_reply_id: menu_human_reply1.id)
 
 HumanReplyKey.create(key: menu_key, human_reply_id: intro_humanReply1.id)
 HumanReplyKey.create(key: menu_key, human_reply_id: intro_humanReply2.id)
+
 
 BotReplyKey.create(key: menu_key, bot_reply_id: intro_botReply5.id)
 
