@@ -12,7 +12,7 @@ HumanReply.all.destroy_all
 intro_key = Key.create(key_phrase: "intro")
 
 intro_botReply1 = BotReply.create(bot_response: "Hey there!", image: false)
-intro_botReply2 = BotReply.create(bot_response: "https://66.media.tumblr.com/6b36b4d8a60e6f955d947647790147ee/tumblr_pqnh4z0GIN1ust9jjo1_500.gifv", image: true)
+intro_botReply2 = BotReply.create(bot_response: "https://media.giphy.com/media/X8ynfaP1ZwTvTbxH1b/giphy.gif", image: true)
 intro_botReply3 = BotReply.create(bot_response: "I'm Lucy and I will be educating you about the amazing woman and LQBT community in tech.", image: false)
 intro_botReply4 = BotReply.create(bot_response: "Let's begin!", image: false)
 intro_botReply5 = BotReply.create(bot_response: "What would you like to look at?", image: false)
@@ -35,23 +35,19 @@ HumanReplyKey.create(key: intro_key, human_reply_id: intro_humanReply2.id)
 
 women_key = Key.create(key_phrase: "woman")
 
-womaen_botReply1 = BotReply.create(bot_response: "Who should we start with?", image: false)
-womaen_botReply2 = BotReply.create(bot_response: "https://media.giphy.com/media/hXCJfewTSyqTXz2trM/giphy.gif", image: true)
+womaen_bot_reply1 = BotReply.create(bot_response: "Who should we start with?", image: false)
+womaen_bot_reply2 = BotReply.create(bot_response: "https://media.giphy.com/media/hXCJfewTSyqTXz2trM/giphy.gif", image: true)
 
-BotReplyKey.create(key: women_key, bot_reply_id: womaen_botReply1.id)
-BotReplyKey.create(key: women_key, bot_reply_id: womaen_botReply2.id)
+BotReplyKey.create(key: women_key, bot_reply_id: womaen_bot_reply1.id)
+BotReplyKey.create(key: women_key, bot_reply_id: womaen_bot_reply2.id)
 
-women_humanReply1 = HumanReply.create(human_response: "Ada Lovelace", value: "ada")
-women_humanReply2 = HumanReply.create(human_response: "Annie Easley", value: "annie")
-women_humanReply3 = HumanReply.create(human_response: "Grace Hopper", value: "grace")
-women_humanReply4 = HumanReply.create(human_response: "The Women of ENIAC", value: "eniac")
-women_humanReply5 = HumanReply.create(human_response: "Carol Shaw", value: "carol")
+women_human_reply1 = HumanReply.create(human_response: "Ada Lovelace", value: "ada")
+women_human_reply2 = HumanReply.create(human_response: "Annie Easley", value: "annie")
+women_human_reply3 = HumanReply.create(human_response: "The Women of ENIAC", value: "eniac")
 
-HumanReplyKey.create(key: women_key, human_reply_id: women_humanReply1.id)
-HumanReplyKey.create(key: women_key, human_reply_id: women_humanReply2.id)
-HumanReplyKey.create(key: women_key, human_reply_id: women_humanReply3.id)
-HumanReplyKey.create(key: women_key, human_reply_id: women_humanReply4.id)
-HumanReplyKey.create(key: women_key, human_reply_id: women_humanReply5.id)
+HumanReplyKey.create(key: women_key, human_reply_id: women_human_reply1.id)
+HumanReplyKey.create(key: women_key, human_reply_id: women_human_reply2.id)
+HumanReplyKey.create(key: women_key, human_reply_id: women_human_reply3.id)
 
 # women in tech end
 
@@ -166,48 +162,54 @@ HumanReplyKey.create(key: annie_key3, human_reply_id: annie_human_reply3.id)
 #Annie Easley end
 
 
-#Grace Hopper start
+#eniac start
 
-grace_key = Key.create(key_phrase: "grace")
+eniac_key = Key.create(key_phrase: "eniac")
 
-grace_reply1 = BotReply.create(bot_response: "Rear Admiral Grace Hopper, the Mother of the Compiler", image: false)
+eniac_reply1 = BotReply.create(bot_response: "The 6 woman who ran the first general purpose, all-electronic computer.", image: false)
 
-BotReplyKey.create(key: grace_key, bot_reply_id: grace_reply1.id)
-
-
-grace_human_reply1 = HumanReply.create(human_response: "Thats cool!", value: "grace2")
-
-HumanReplyKey.create(key: grace_key, human_reply_id: grace_human_reply1.id)
-
-grace_key2 = Key.create(key_phrase: "grace2")
-
-grace_reply3 = BotReply.create(bot_response: "She was 1 of 4 African-Americans to be hired at Naca.", image: false)
-grace_reply4 = BotReply.create(bot_response: "She developed and implementing computer code that analyzed alternative power technologies, supported the Centaur high-energy upper rocket stage, determined solar, wind and energy projects, identified energy conversion systems and alternative systems to solve energy problems", image: false)
-grace_reply5 = BotReply.create(bot_response: "This work laid the foundation for future satellite and space shuttle launches.", image: false)
-
-BotReplyKey.create(key: grace_key2, bot_reply_id: grace_reply3.id)
-BotReplyKey.create(key: grace_key2, bot_reply_id: grace_reply4.id)
-BotReplyKey.create(key: grace_key2, bot_reply_id: grace_reply5.id)
+BotReplyKey.create(key: eniac_key, bot_reply_id: eniac_reply1.id)
 
 
-grace_human_reply2 = HumanReply.create(human_response: "I love that!", value: "grace3")
+eniac_human_reply1 = HumanReply.create(human_response: "Tell me more!", value: "eniac2")
 
-HumanReplyKey.create(key: grace_key2, human_reply_id: grace_human_reply2.id)
+HumanReplyKey.create(key: eniac_key, human_reply_id: eniac_human_reply1.id)
 
-grace_key3 = Key.create(key_phrase: "grace3")
+eniac_key2 = Key.create(key_phrase: "eniac2")
 
-grace_reply6 = BotReply.create(bot_response: "She was a strong advocate for woman and minority in STEM throughout her career.", image: false)
-grace_reply7 = BotReply.create(bot_response: "https://media.giphy.com/media/eM16dA4eiatuyUs3rA/giphy.gif", image: true)
+eniac_reply3 = BotReply.create(bot_response: "During World War 2, 100 woman were selected to do computations for weaponary.", image: false)
+eniac_reply4 = BotReply.create(bot_response: "6 out of the 100 were selected to work on a top secret project, the ENIAC.", image: false)
+eniac_reply5 = BotReply.create(bot_response: "The woman were not allowed to see the computer to begin with but instead were given circuit diagrams and blueprints for the machine and told to teach themselves.", image: false)
+eniac_reply6 = BotReply.create(bot_response: "Eventually they began working on the computer which involved moving cables and turning dials to program this 1000kg machine.", image: false)
+eniac_reply7 = BotReply.create(bot_response: "After the war when the project was released, they were often told to pose by the machine for pictures but were never recognised by name.", image: false)
+eniac_reply8 = BotReply.create(bot_response: "These woman were Jean Bartik, Kathleen Antonelli, Marlyn Meltzer, Frances Spense, Ruth Teitelbaum, and Betty Holberton.", image: false)
+eniac_reply9 = BotReply.create(bot_response: "https://hips.hearstapps.com/mac.h-cdn.co/assets/17/36/980x1468/eniac-women-970x647-c.jpg?resize=768:*", image: true)
 
-BotReplyKey.create(key: grace_key3, bot_reply_id: grace_reply6.id)
-BotReplyKey.create(key: grace_key3, bot_reply_id: grace_reply7.id)
+BotReplyKey.create(key: eniac_key2, bot_reply_id: eniac_reply3.id)
+BotReplyKey.create(key: eniac_key2, bot_reply_id: eniac_reply4.id)
+BotReplyKey.create(key: eniac_key2, bot_reply_id: eniac_reply5.id)
+BotReplyKey.create(key: eniac_key2, bot_reply_id: eniac_reply6.id)
+BotReplyKey.create(key: eniac_key2, bot_reply_id: eniac_reply7.id)
+BotReplyKey.create(key: eniac_key2, bot_reply_id: eniac_reply8.id)
+BotReplyKey.create(key: eniac_key2, bot_reply_id: eniac_reply9.id)
 
-grace_human_reply3 = HumanReply.create(human_response: "Let's learn about someone else", value: "menu")
 
-HumanReplyKey.create(key: grace_key3, human_reply_id: grace_human_reply3.id)
+eniac_human_reply2 = HumanReply.create(human_response: "What else...", value: "eniac3")
+
+HumanReplyKey.create(key: eniac_key2, human_reply_id: eniac_human_reply2.id)
+
+eniac_key3 = Key.create(key_phrase: "eniac3")
+
+eniac_reply10 = BotReply.create(bot_response: "World War 2 opened highlighted the importance of woman in the workforce and opened up the doors to a fairer and more equal society.", image: false)
+
+BotReplyKey.create(key: eniac_key3, bot_reply_id: eniac_reply10.id)
+
+eniac_human_reply3 = HumanReply.create(human_response: "Who else can I learn about?", value: "menu")
+
+HumanReplyKey.create(key: eniac_key3, human_reply_id: eniac_human_reply3.id)
 
 
-#Grace Hopper end
+#eniac end
 
 
 
